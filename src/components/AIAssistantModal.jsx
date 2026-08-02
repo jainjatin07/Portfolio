@@ -320,6 +320,14 @@ export default function AIAssistantModal({ isOpen, onClose }) {
     }
   }
 
+  // Background wake-up ping for Render cold start
+  useEffect(() => {
+    if (isOpen) {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://portfolio-ftol.onrender.com"
+      fetch(backendUrl).catch(() => null)
+    }
+  }, [isOpen])
+
   // Handle Send Message
   const handleSendMessage = async (textToSend) => {
     const query = textToSend || inputValue
@@ -338,13 +346,26 @@ export default function AIAssistantModal({ isOpen, onClose }) {
     setIsThinking(true)
 
     try {
-      // Attempt backend API call if server is running
+      // Attempt backend API call with cold-start retries
       const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://portfolio-ftol.onrender.com"
-      const res = await fetch(`${backendUrl}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: query }),
-      }).catch(() => null)
+      let res = null
+      
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          const controller = new AbortController()
+          const timeoutId = setTimeout(() => controller.abort(), 20000)
+          res = await fetch(`${backendUrl}/api/chat`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: query }),
+            signal: controller.signal
+          })
+          clearTimeout(timeoutId)
+          if (res && res.ok) break
+        } catch {
+          if (attempt < 2) await new Promise(r => setTimeout(r, 1500))
+        }
+      }
 
       let assistantResponse = null
       if (res && res.ok) {
