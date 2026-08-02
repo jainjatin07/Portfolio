@@ -9,9 +9,9 @@ export default function HomePage() {
   return (
     <>
       <SEOHead
-        title="Avdesh Jadon | Software Tester & Full Stack Developer | B.Tech CSE NIT Jalandhar"
-        description="Official portfolio of Avdesh Jadon — Software Tester & Full Stack Developer from NIT Jalandhar. Explore my projects in React, Node.js, Python. Open source contributor. Available for internships, freelance, and full-time opportunities. Contact me today."
-        keywords="Avdesh Jadon, avdeshjadon, Avdesh Jadon portfolio, Avdesh Jadon NIT Jalandhar, Avdesh Jadon GitHub, Avdesh Jadon LinkedIn, Software Tester, Full Stack Developer, QA Engineer, SDET, MERN Stack, React Developer, Node.js Developer, JavaScript, Test Automation, Open Source, NIT Jalandhar, B.Tech CSE, Web Developer India, Avdesh Jadon resume, Avdesh Jadon developer, Avdesh Jadon projects, hire Avdesh Jadon"
+        title="Jatin Jain | AI Engineer | LLM Applications & RAG Systems"
+        description="Official portfolio of Jatin Jain — AI Engineer specializing in LLM applications, Retrieval-Augmented Generation (RAG) systems, and conversational AI. Experienced in Python, LangChain, PyTorch, TensorFlow, ChromaDB."
+        keywords="Jatin Jain, jainjatin07, Jatin Jain portfolio, Jatin Jain AI Engineer, Jatin Jain LLM, Jatin Jain RAG, Jatin Jain GitHub, Jatin Jain LinkedIn, AI Engineer, LLM Applications, RAG Systems, LangChain, Python AI"
         canonicalPath="/"
         ogType="profile"
       />

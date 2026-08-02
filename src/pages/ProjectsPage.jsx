@@ -5,9 +5,9 @@ export default function ProjectsPage() {
   return (
     <div className="mt-24">
       <SEOHead
-        title="Projects by Avdesh Jadon | Web Apps, Browser Extensions & Open Source"
-        description="Explore projects by Avdesh Jadon — Practice Typing app, Secret Sauce AI assistant, WebIn browser extension, Cookies Extractor, Panda Login. Built with React, AI/ML, Electron, JavaScript. Open source contributions on GitHub."
-        keywords="Avdesh Jadon projects, Avdesh Jadon GitHub projects, Practice Typing App, Secret Sauce AI Assistant, WebIn Extension, Cookies Extractor, Panda Login, React Projects, AI Projects, Electron Projects, JavaScript Projects, Open Source, Browser Extensions, avdeshjadon"
+        title="Projects by Jatin Jain | Multi-PDF RAG Pipeline, AI Chatbot & Virtual Assistant"
+        description="Explore projects by Jatin Jain — Aether Multi-PDF RAG Pipeline, Junoon Mood-Driven AI Chatbot, NemiVerse AI Virtual Assistant, Junovision Facial Recognition Attendance System."
+        keywords="Jatin Jain projects, Aether RAG Pipeline, Junoon AI Chatbot, NemiVerse Virtual Assistant, Junovision Attendance System, LangChain Projects, Python AI Projects"
         canonicalPath="/projects"
       />
       <Projects />

@@ -2,16 +2,16 @@ import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { BiLogoGmail } from 'react-icons/bi'
 import { BsGithub } from 'react-icons/bs'
-import { IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io5'
+import { IoLogoLinkedin, IoLogoInstagram, IoLogoWhatsapp } from 'react-icons/io5'
 import { IoMdMail } from "react-icons/io"
-import { FaPhone } from "react-icons/fa6"
+import { FaPhone, FaWhatsapp } from "react-icons/fa6"
 
 const socials = [
-  { Icon: BiLogoGmail, link: "mailto:theavdeshjadon@gmail.com", label: "Email" },
-  { Icon: IoLogoLinkedin, link: "https://linkedin.com/in/avdeshjadon", label: "LinkedIn" },
-  { Icon: IoLogoTwitter, link: "https://x.com/AvdeshJado26477", label: "Twitter" },
-  { Icon: IoLogoInstagram, link: "https://instagram.com/__avdeshhere", label: "Instagram" },
-  { Icon: BsGithub, link: "https://github.com/avdeshjadon", label: "GitHub" },
+  { Icon: BiLogoGmail, link: "mailto:jainjatin386@gmail.com", label: "Email" },
+  { Icon: IoLogoLinkedin, link: "https://www.linkedin.com/in/jainjatin07/", label: "LinkedIn" },
+  { Icon: IoLogoInstagram, link: "https://www.instagram.com/jain_jatin_07", label: "Instagram" },
+  { Icon: IoLogoWhatsapp, link: "https://wa.me/917466804158", label: "WhatsApp" },
+  { Icon: BsGithub, link: "https://github.com/jainjatin07", label: "GitHub" },
 ]
 
 export default function Contact() {
@@ -25,29 +25,24 @@ export default function Contact() {
   })
 
   const [result, setResult] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = async (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-    setIsSubmitting(true);
-    setResult("Sending....");
     const formData = new FormData(event.target);
-    formData.append("access_key", "832b2d27-3b6e-4754-94c9-cff3fd5e50fb");
+    const name = formData.get("name") || "";
+    const email = formData.get("email") || "";
+    const website = formData.get("website") || "";
+    const message = formData.get("message") || "";
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+    const formattedMessage = `Hello Jatin!%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}${website ? `%0A*Website:* ${encodeURIComponent(website)}` : ''}%0A*Message:* ${encodeURIComponent(message)}`;
 
-    const data = await response.json();
-    if (data.success) {
-      setResult("Message sent! I'll get back to you soon.");
-      event.target.reset();
-      setTimeout(() => setResult(''), 5000); // clear success msg after 5 secs
-    } else {
-      setResult("Oops! Something went wrong.");
-    }
-    setIsSubmitting(false);
+    const whatsappUrl = `https://wa.me/917466804158?text=${formattedMessage}`;
+    
+    setResult("Forwarding to WhatsApp...");
+    window.open(whatsappUrl, "_blank");
+
+    event.target.reset();
+    setTimeout(() => setResult(''), 4000);
   };
 
   return (
@@ -65,7 +60,7 @@ export default function Contact() {
               <motion.p
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`text-sm ${result.includes('Message sent') ? 'text-green-600' : (result === 'Sending....' ? 'text-gray-500' : 'text-red-500')}`}
+                className="text-sm text-green-600 font-medium"
               >
                 {result}
               </motion.p>
@@ -73,13 +68,12 @@ export default function Contact() {
 
             <div className='flex justify-between gap-3 lg:gap-5 flex-col lg:flex-row'>
               <motion.button 
-                whileHover={!isSubmitting ? { scale: 1.03 } : {}} 
-                whileTap={!isSubmitting ? { scale: 0.97 } : {}}
+                whileHover={{ scale: 1.03 }} 
+                whileTap={{ scale: 0.97 }}
                 type='submit' 
-                disabled={isSubmitting}
-                className='bg-black justify-center w-fit lg:w-auto lg:flex-1 hover:shadow-lg text-white px-3 py-2 rounded flex items-center gap-x-3 font-normal disabled:opacity-70 disabled:cursor-not-allowed transition-shadow duration-300'
+                className='bg-black justify-center w-fit lg:w-auto lg:flex-1 hover:shadow-lg text-white px-5 py-3 rounded flex items-center gap-x-3 font-normal transition-shadow duration-300'
               >
-                {isSubmitting ? 'Sending...' : 'Get In Touch'}
+                <IoLogoWhatsapp className="w-5 h-5 text-emerald-400" /> Get In Touch
               </motion.button>
               <div className='flex items-center gap-x-2 lg:gap-x-5'>
                 {socials.map(({ Icon, link, label }, i) => (
@@ -107,11 +101,11 @@ export default function Contact() {
           </div>
           <p className='text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-6 font-light leading-relaxed'>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
           <div className='font-normal text-sm lg:text-lg flex flex-col mt-6 gap-2 lg:gap-4'>
-            <motion.a whileHover={{ x: 5 }} className='flex items-center gap-2 group transition-all duration-300' href="mailto:theavdeshjadon@gmail.com">
-              <span className='border transition-all duration-300 border-transparent group-hover:border-black rounded-full p-1'><IoMdMail className="w-4 h-4 lg:w-5 lg:h-5" /></span>theavdeshjadon@gmail.com
+            <motion.a whileHover={{ x: 5 }} className='flex items-center gap-2 group transition-all duration-300' href="mailto:jainjatin386@gmail.com">
+              <span className='border transition-all duration-300 border-transparent group-hover:border-black rounded-full p-1'><IoMdMail className="w-4 h-4 lg:w-5 lg:h-5" /></span>jainjatin386@gmail.com
             </motion.a>
-            <motion.a whileHover={{ x: 5 }} className='flex items-center gap-2 group transition-all duration-300' href="tel:6201979695">
-              <span className='border transition-all duration-300 border-transparent group-hover:border-black rounded-full p-[5px]'><FaPhone className="w-3 h-3 lg:w-4 lg:h-4" /></span>+91 6201979695
+            <motion.a whileHover={{ x: 5 }} className='flex items-center gap-2 group transition-all duration-300' href="tel:7466804158">
+              <span className='border transition-all duration-300 border-transparent group-hover:border-black rounded-full p-[5px]'><FaPhone className="w-3 h-3 lg:w-4 lg:h-4" /></span>+91 7466804158
             </motion.a>
           </div>
         </motion.div>

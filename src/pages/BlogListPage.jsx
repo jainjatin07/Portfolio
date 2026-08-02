@@ -21,8 +21,8 @@ export default function BlogListPage() {
   return (
     <div className="mt-28 mb-20 min-h-[60vh]">
       <SEOHead
-        title="Blog | Avdesh Jadon — Articles on Testing, Development & Tech"
-        description="Read the latest articles on web development, software testing, React, and tech roadmaps by Avdesh Jadon. In-depth guides for developers and QA engineers."
+        title="Blog | Jatin Jain — Articles on AI, RAG Systems & Engineering"
+        description="Read the latest articles on AI engineering, RAG systems, LLM applications, Python, and tech roadmaps by Jatin Jain."
         canonicalPath="/blog"
       />
 
@@ -151,7 +151,7 @@ export default function BlogListPage() {
           </p>
           <div className="mt-5 flex justify-center gap-3">
             <a
-              href="https://github.com/avdeshjadon"
+              href="https://github.com/jainjatin07"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 text-sm border border-black/80 rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-normal"
@@ -159,7 +159,7 @@ export default function BlogListPage() {
               Follow on GitHub
             </a>
             <a
-              href="https://linkedin.com/in/avdeshjadon"
+              href="https://www.linkedin.com/in/jainjatin07/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 text-sm bg-black text-white rounded-lg hover:bg-black/80 transition-all duration-300 font-normal"

@@ -3,109 +3,31 @@ import { Helmet } from "react-helmet-async";
 // ─────────────────────────────────────────────────────────────────────────────
 // CONSTANTS
 // ─────────────────────────────────────────────────────────────────────────────
-const BASE_URL = "https://avdeshjadon.dpdns.org";
-const PROFILE_IMAGE = `${BASE_URL}/assets/avdeshjadon.jpeg`;
-const SITE_NAME = "Avdesh Jadon - Software Tester & Full Stack Developer";
+const BASE_URL = "https://jatinjain.dev";
+const PROFILE_IMAGE = `${BASE_URL}/assets/hero-sketch.png`;
+const SITE_NAME = "Jatin Jain - AI Engineer | LLM Applications & RAG Systems";
 const PERSON_ID = `${BASE_URL}/#person`;
 const WEBSITE_ID = `${BASE_URL}/#website`;
-const PERSON_NAME = "Avdesh Jadon";
-const PERSON_EMAIL = "theavdeshjadon@gmail.com";
-const PERSON_PHONE = "+91-6201979695";
-const TWITTER_HANDLE = "@Theavdeshjadon";
-const LAST_MODIFIED = "2026-05-01";
-
-// All profile images — every one needs to rank in Google Images
+const PERSON_NAME = "Jatin Jain";
+const PERSON_EMAIL = "jainjatin386@gmail.com";
+const PERSON_PHONE = "+91-7466804158";
+const TWITTER_HANDLE = "@jainjatin07";
+const LAST_MODIFIED = "2026-07-31";
 
 const ALL_IMAGES = [
   {
-    url: `${BASE_URL}/assets/avdeshjadon.jpeg`,
-    name: "Avdesh Jadon Official Profile Photo",
+    url: `${BASE_URL}/assets/hero-sketch.png`,
+    name: "Jatin Jain Official Profile Photo",
     caption:
-      "Official profile photo of Avdesh Jadon, Software Tester and Full Stack Developer from NIT Jalandhar",
+      "Official profile photo of Jatin Jain, AI Engineer specializing in LLM Applications & RAG Systems",
     representativeOfPage: true,
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-official-profile.jpg`,
-    name: "Avdesh Jadon Official Professional Profile",
-    caption:
-      "Avdesh Jadon official professional profile — B.Tech CSE, NIT Jalandhar",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-developer-portfolio-main.jpg`,
-    name: "Avdesh Jadon Developer Portfolio Main Photo",
-    caption:
-      "Avdesh Jadon main developer portfolio photo — Full Stack Developer",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-nit-jalandhar-cse.jpg`,
-    name: "Avdesh Jadon NIT Jalandhar CSE",
-    caption: "Avdesh Jadon, B.Tech Computer Science student at NIT Jalandhar",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-software-developer-full-stack.jpg`,
-    name: "Avdesh Jadon Full Stack Software Developer",
-    caption:
-      "Avdesh Jadon as a Full Stack Software Developer — MERN Stack expert",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-qa-automation-engineer.jpg`,
-    name: "Avdesh Jadon QA Automation Engineer",
-    caption:
-      "Avdesh Jadon as a QA and Test Automation Engineer — Selenium, Cypress, Jest",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-professional-headshot.jpg`,
-    name: "Avdesh Jadon Professional Headshot",
-    caption:
-      "Professional headshot photo of Avdesh Jadon — Software Developer, India",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-software-tester-nitj.jpg`,
-    name: "Avdesh Jadon Software Tester NIT Jalandhar",
-    caption:
-      "Avdesh Jadon as a Software Tester from NIT Jalandhar — Manual and Automated Testing",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-mern-stack-developer.jpg`,
-    name: "Avdesh Jadon MERN Stack Developer",
-    caption:
-      "Avdesh Jadon as a MERN Stack Developer — MongoDB, Express, React, Node.js",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-javascript-expert.jpg`,
-    name: "Avdesh Jadon JavaScript Expert Developer",
-    caption: "Avdesh Jadon as a JavaScript expert and web developer",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-coding-expert.jpg`,
-    name: "Avdesh Jadon Coding Expert",
-    caption: "Avdesh Jadon as a coding expert and competitive programmer",
-  },
-  {
-    url: `${BASE_URL}/assets/profiles/avdesh-jadon-web-designer-india.jpg`,
-    name: "Avdesh Jadon Web Designer India",
-    caption: "Avdesh Jadon as a Web Designer from India",
-  },
+  }
 ];
 
-// All social/platform profiles — sameAs is the backbone of Knowledge Panel
-
 const SAME_AS = [
-  "https://github.com/avdeshjadon",
-  "https://linkedin.com/in/avdeshjadon",
-  "https://www.linkedin.com/in/avdeshjadon",
-  "https://x.com/AvdeshJado26477",
-  "https://twitter.com/AvdeshJado26477",
-  "https://instagram.com/__avdeshhere",
-  "https://www.instagram.com/__avdeshhere",
-  "https://www.geeksforgeeks.org/profile/theavdeshjadon",
-  "https://www.geeksforgeeks.org/profile/thakuravdeshjadon",
-  "https://dev.to/avdeshjadon",
-  "https://www.hackerrank.com/avdeshjadon",
-  "https://leetcode.com/avdeshjadon",
-  "https://www.codechef.com/users/avdeshjadon",
-  "https://codolio.com/profile/avdeshjadon",
-  BASE_URL,
+  "https://github.com/jainjatin07",
+  "https://www.linkedin.com/in/jainjatin07/",
+  "https://www.instagram.com/jain_jatin_07",
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -149,28 +71,19 @@ const buildPersonSchema = () => ({
   "@id": PERSON_ID,
   name: PERSON_NAME,
   alternateName: [
-    "avdeshjadon",
-    "Avdesh",
-    "Thakur Avdesh Jadon",
-    "Avdesh Jadon NIT Jalandhar",
-    "Avdesh Jadon Developer",
-    "Avdesh Jadon Tester",
-    "Avdesh Jadon NITJ",
-    "Avdesh Jadon CSE",
-    "Avdesh Jadon Full Stack",
-    "Avdesh Jadon MERN",
-    "Avdesh Jadon QA",
-    "Avdesh Jadon SDET",
-    "Avdesh Jadon Open Source",
+    "jainjatin07",
+    "Jatin Jain",
+    "Jatin Jain AI Engineer",
+    "Jatin Jain LLM Developer",
+    "Jatin Jain RAG Engineer",
   ],
-  givenName: "Avdesh",
-  familyName: "Jadon",
-  additionalName: "Thakur",
+  givenName: "Jatin",
+  familyName: "Jain",
   honorificPrefix: "Mr.",
   gender: "Male",
   nationality: { "@type": "Country", name: "India" },
   description:
-    "Avdesh Jadon is a Software Tester and Full Stack Developer from NIT Jalandhar (Dr B R Ambedkar National Institute of Technology Jalandhar). B.Tech CSE student, MERN stack expert, test automation engineer (Selenium, Cypress, Jest), and open source contributor. Available for internships, freelance, and full-time roles.",
+    "Jatin Jain is an AI Engineer specializing in LLM-powered applications, Retrieval-Augmented Generation (RAG) systems, and conversational AI solutions. B.Tech CSE (AI/ML/DL Specialization) from Teerthanker Mahaveer University.",
   url: BASE_URL,
   email: PERSON_EMAIL,
   telephone: PERSON_PHONE,
@@ -178,35 +91,20 @@ const buildPersonSchema = () => ({
   mainEntityOfPage: { "@type": "WebPage", "@id": `${BASE_URL}/` },
   sameAs: SAME_AS,
   jobTitle: [
-    "Software Tester",
-    "Full Stack Developer",
-    "QA Engineer",
-    "SDET",
-    "MERN Stack Developer",
-    "Test Automation Engineer",
-    "Open Source Contributor",
+    "AI Engineer",
+    "LLM Developer",
+    "RAG Systems Engineer",
+    "Python AI Intern",
   ],
-  worksFor: { "@type": "Organization", name: "Freelance / Self-Employed" },
+  worksFor: { "@type": "Organization", name: "Provisioning Tech" },
   alumniOf: {
     "@type": "CollegeOrUniversity",
-    name: "Dr B R Ambedkar National Institute of Technology Jalandhar",
-    alternateName: ["NIT Jalandhar", "NITJ", "Dr B R Ambedkar NIT Jalandhar"],
-    url: "https://www.nitj.ac.in",
-    sameAs: [
-      "https://en.wikipedia.org/wiki/Dr._B._R._Ambedkar_National_Institute_of_Technology_Jalandhar",
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Jalandhar",
-      addressRegion: "Punjab",
-      addressCountry: "IN",
-      postalCode: "144027",
-    },
+    name: "Teerthanker Mahaveer University",
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Jalandhar",
-    addressRegion: "Punjab",
+    addressLocality: "Firozabad",
+    addressRegion: "Uttar Pradesh",
     addressCountry: "IN",
   },
   contactPoint: [
@@ -217,54 +115,27 @@ const buildPersonSchema = () => ({
       email: PERSON_EMAIL,
       availableLanguage: ["English", "Hindi"],
     },
-    {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      url: `${BASE_URL}/contact`,
-      availableLanguage: ["English", "Hindi"],
-    },
   ],
   knowsAbout: [
-    "Software Testing",
-    "Manual Testing",
-    "Test Automation",
-    "Selenium WebDriver",
-    "Cypress",
-    "Jest",
-    "JUnit",
-    "JMeter",
-    "Full Stack Development",
-    "MERN Stack",
-    "JavaScript",
-    "TypeScript",
-    "React.js",
-    "Next.js",
-    "Node.js",
-    "MongoDB",
-    "Express.js",
-    "PostgreSQL",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Deep Learning",
+    "Natural Language Processing",
+    "Generative AI",
+    "LLM Applications",
+    "Retrieval-Augmented Generation (RAG)",
+    "LangChain",
+    "ChromaDB",
+    "PyTorch",
+    "TensorFlow",
+    "Scikit-learn",
     "Python",
-    "Java",
-    "C++",
-    "C",
-    "Git",
-    "GitHub",
-    "Docker",
-    "AWS",
-    "API Testing",
-    "Postman",
-    "JIRA",
-    "Quality Assurance",
-    "Open Source",
-    "Agile",
-    "Web Design",
-    "Software Architecture",
-    "Data Structures and Algorithms",
-    "Competitive Programming",
-    "RESTful APIs",
-    "GraphQL",
-    "CI/CD",
-    "DevOps",
+    "Django",
+    "Flask",
+    "FastAPI",
+    "MySQL",
+    "N8N",
+    "Zapier",
   ],
   knowsLanguage: [
     { "@type": "Language", name: "English", alternateName: "en" },
@@ -273,48 +144,15 @@ const buildPersonSchema = () => ({
   hasOccupation: [
     {
       "@type": "Occupation",
-      name: "Software Tester",
+      name: "AI Engineer",
       description:
-        "Experienced in manual and automated testing, test case design, bug tracking, and QA using Selenium, Cypress, Jest, JUnit, and JIRA.",
+        "Building LLM-powered applications, multi-document RAG pipelines using LangChain and ChromaDB, and conversational AI tools.",
       skills:
-        "Test Automation, Manual Testing, Selenium, Cypress, Jest, JUnit, JIRA, API Testing, Regression Testing, JMeter, Performance Testing",
-      occupationLocation: { "@type": "Country", name: "India" },
-    },
-    {
-      "@type": "Occupation",
-      name: "Full Stack Developer",
-      description:
-        "Building web applications with MERN stack, responsive design, REST APIs, and modern JavaScript frameworks.",
-      skills:
-        "React.js, Next.js, Node.js, MongoDB, Express.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, REST APIs, GraphQL",
+        "Python, LangChain, ChromaDB, PyTorch, TensorFlow, Scikit-learn, Django, FastAPI, NLP",
       occupationLocation: { "@type": "Country", name: "India" },
     },
   ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Software Services by Avdesh Jadon",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Software Testing & QA Automation",
-          description:
-            "Manual testing, automated testing (Selenium, Cypress), API testing (Postman), performance testing (JMeter)",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Full Stack Web Development",
-          description:
-            "MERN stack apps with React.js, Node.js, MongoDB, Express.js, REST APIs",
-        },
-      },
-    ],
-  },
-  award: ["Open Source Contributor", "NIT Jalandhar B.Tech CSE Student"],
+  award: ["Mock offer letter ₹5 LPA - Samarthya Bodh 3.0", "IEEE 2024 Technical Conference"],
 });
 
 const buildWebSiteSchema = () => ({
@@ -323,13 +161,13 @@ const buildWebSiteSchema = () => ({
   "@id": WEBSITE_ID,
   name: SITE_NAME,
   alternateName: [
-    "Avdesh Jadon Portfolio",
-    "avdeshjadon",
-    "Avdesh Jadon Official Website",
+    "Jatin Jain Portfolio",
+    "jainjatin07",
+    "Jatin Jain Official Website",
   ],
   url: BASE_URL,
   description:
-    "Official portfolio of Avdesh Jadon — Software Tester, Full Stack Developer, B.Tech CSE at NIT Jalandhar. Open Source Contributor.",
+    "Official portfolio of Jatin Jain — AI Engineer specializing in LLM Applications & RAG Systems.",
   author: { "@id": PERSON_ID },
   publisher: { "@id": PERSON_ID },
   creator: { "@id": PERSON_ID },
@@ -344,14 +182,6 @@ const buildWebSiteSchema = () => ({
     url: `${BASE_URL}/assets/favicon.svg`,
     width: "512",
     height: "512",
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
   },
 });
 
@@ -392,7 +222,7 @@ const buildWebPageSchema = ({
       {
         "@type": "ListItem",
         position: 1,
-        name: "Avdesh Jadon - Home",
+        name: "Jatin Jain - Home",
         item: BASE_URL,
       },
       ...(canonicalPath !== "/"
@@ -414,9 +244,9 @@ const buildImageGallerySchema = () => ({
   "@context": "https://schema.org",
   "@type": "ImageGallery",
   "@id": `${BASE_URL}/#gallery`,
-  name: "Avdesh Jadon - Official Photo Gallery",
+  name: "Jatin Jain - Portfolio",
   description:
-    "Official photos and images of Avdesh Jadon, Software Tester and Full Stack Developer from NIT Jalandhar",
+    "Official portfolio images of Jatin Jain, AI Engineer",
   url: BASE_URL,
   author: { "@id": PERSON_ID },
   creator: { "@id": PERSON_ID },
@@ -447,21 +277,20 @@ const buildProfilePageSchema = ({ title, description, canonicalUrl }) => ({
 const buildSocialLinksSchema = () => ({
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Avdesh Jadon - All Social & Professional Profiles",
+  name: "Jatin Jain - Social & Professional Profiles",
   description:
-    "Complete list of all official social media and professional profiles of Avdesh Jadon",
+    "Official social media and professional profiles of Jatin Jain",
   author: { "@id": PERSON_ID },
-  numberOfItems: 10,
+  numberOfItems: 3,
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       item: {
         "@type": "WebPage",
-        name: "Avdesh Jadon GitHub",
-        url: "https://github.com/avdeshjadon",
-        description:
-          "Avdesh Jadon's GitHub — open source projects and contributions",
+        name: "Jatin Jain GitHub",
+        url: "https://github.com/jainjatin07",
+        description: "Jatin Jain GitHub profile",
       },
     },
     {
@@ -469,9 +298,9 @@ const buildSocialLinksSchema = () => ({
       position: 2,
       item: {
         "@type": "WebPage",
-        name: "Avdesh Jadon LinkedIn",
-        url: "https://linkedin.com/in/avdeshjadon",
-        description: "Avdesh Jadon's LinkedIn — professional network",
+        name: "Jatin Jain LinkedIn",
+        url: "https://www.linkedin.com/in/jainjatin07/",
+        description: "Jatin Jain LinkedIn profile",
       },
     },
     {
@@ -479,79 +308,9 @@ const buildSocialLinksSchema = () => ({
       position: 3,
       item: {
         "@type": "WebPage",
-        name: "Avdesh Jadon Instagram",
-        url: "https://instagram.com/__avdeshhere",
-        description: "Avdesh Jadon's Instagram profile",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon Twitter / X",
-        url: "https://x.com/AvdeshJado26477",
-        description: "Avdesh Jadon's X (Twitter) profile",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 5,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon GeeksforGeeks",
-        url: "https://www.geeksforgeeks.org/profile/theavdeshjadon",
-        description: "Avdesh Jadon's GeeksforGeeks profile",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 6,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon LeetCode",
-        url: "https://leetcode.com/avdeshjadon",
-        description: "Avdesh Jadon's LeetCode competitive programming profile",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 7,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon HackerRank",
-        url: "https://www.hackerrank.com/avdeshjadon",
-        description: "Avdesh Jadon's HackerRank profile",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 8,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon CodeChef",
-        url: "https://www.codechef.com/users/avdeshjadon",
-        description: "Avdesh Jadon's CodeChef competitive programming profile",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 9,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon Dev.to",
-        url: "https://dev.to/avdeshjadon",
-        description: "Avdesh Jadon's Dev.to blog and articles",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 10,
-      item: {
-        "@type": "WebPage",
-        name: "Avdesh Jadon Codolio",
-        url: "https://codolio.com/profile/avdeshjadon",
-        description: "Avdesh Jadon's Codolio developer profile",
+        name: "Jatin Jain Instagram",
+        url: "https://www.instagram.com/jain_jatin_07",
+        description: "Jatin Jain Instagram profile",
       },
     },
   ],
@@ -590,9 +349,9 @@ const buildArticleSchema = ({ title, description, canonicalUrl, article }) => {
 // COMPONENT
 // ─────────────────────────────────────────────────────────────────────────────
 export default function SEOHead({
-  title = `${PERSON_NAME} | Software Tester & Full Stack Developer | B.Tech CSE NIT Jalandhar | Open Source Contributor`,
-  description = `${PERSON_NAME} - Software Tester and Full Stack Developer from Dr B R Ambedkar National Institute of Technology (NIT Jalandhar), B.Tech CSE. Expert in test automation (Selenium, Cypress, Jest), MERN stack (React.js, Node.js, MongoDB), JavaScript, Python. Open Source Contributor. Available for internships, freelance, and full-time roles. Contact: ${PERSON_EMAIL}`,
-  keywords = "Avdesh Jadon, avdeshjadon, Avdesh Jadon portfolio, Avdesh Jadon NIT Jalandhar, Avdesh Jadon developer, Avdesh Jadon software tester, Avdesh Jadon GitHub, Avdesh Jadon LinkedIn, Avdesh Jadon Instagram, Avdesh Jadon GeeksforGeeks, Avdesh Jadon LeetCode, Avdesh Jadon HackerRank, Avdesh Jadon CodeChef, Avdesh Jadon Codolio, Avdesh Jadon resume, Avdesh Jadon contact, Avdesh Jadon photos, Avdesh Jadon profile pic, Thakur Avdesh Jadon, Software Tester, Full Stack Developer, QA Engineer, SDET, MERN Stack Developer, React Developer, Node.js Developer, JavaScript Developer, Test Automation Engineer, NIT Jalandhar, B.Tech CSE, Open Source Contributor, Web Developer India",
+  title = `${PERSON_NAME} | AI Engineer | LLM Applications & RAG Systems`,
+  description = `${PERSON_NAME} - AI Engineer specializing in LLM applications, Retrieval-Augmented Generation (RAG) systems, and conversational AI solutions. Experienced with LangChain, ChromaDB, Python, PyTorch, TensorFlow, Django, Flask, FastAPI. Contact: ${PERSON_EMAIL}`,
+  keywords = "Jatin Jain, jainjatin07, Jatin Jain portfolio, Jatin Jain AI Engineer, Jatin Jain LLM, Jatin Jain RAG, Jatin Jain GitHub, Jatin Jain LinkedIn, Jatin Jain Instagram, Jatin Jain resume, Jatin Jain contact, AI Engineer India, LLM Developer, RAG Systems Engineer, LangChain Developer, Generative AI Engineer, Python AI Intern",
   canonicalPath = "/",
   ogType = "website",
   image = PROFILE_IMAGE,
@@ -613,11 +372,11 @@ export default function SEOHead({
       <meta name="keywords" content={keywords} />
       <meta
         name="subject"
-        content={`${PERSON_NAME} - Software Tester and Full Stack Developer`}
+        content={`${PERSON_NAME} - AI Engineer Portfolio`}
       />
       <meta
         name="topic"
-        content="Software Development, Software Testing, Full Stack Development, MERN Stack"
+        content="AI Engineering, Artificial Intelligence, LLM Applications, RAG Systems, Generative AI"
       />
       <meta
         name="classification"
@@ -701,16 +460,16 @@ export default function SEOHead({
 
       {/* Profile OG */}
 
-      <meta property="profile:first_name" content="Avdesh" />
-      <meta property="profile:last_name" content="Jadon" />
-      <meta property="profile:username" content="avdeshjadon" />
+      <meta property="profile:first_name" content="Jatin" />
+      <meta property="profile:last_name" content="Jain" />
+      <meta property="profile:username" content="jainjatin07" />
       <meta property="profile:gender" content="male" />
 
       {/* ── ARTICLE META ───────────────────────────────────────────────────── */}
 
       <meta
         property="article:author"
-        content="https://linkedin.com/in/avdeshjadon"
+        content="https://www.linkedin.com/in/jainjatin07/"
       />
       <meta property="article:publisher" content={BASE_URL} />
       {isArticle && (
@@ -745,15 +504,15 @@ export default function SEOHead({
         name="twitter:image:alt"
         content={`${PERSON_NAME} - ${title.split("|")[0].trim()}`}
       />
-      <meta name="twitter:domain" content="avdeshjadon.dpdns.org" />
+      <meta name="twitter:domain" content="jatinjain.dev" />
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:label1" content="Role" />
       <meta
         name="twitter:data1"
-        content="Software Tester & Full Stack Developer"
+        content="AI Engineer | LLM & RAG Systems"
       />
-      <meta name="twitter:label2" content="College" />
-      <meta name="twitter:data2" content="NIT Jalandhar" />
+      <meta name="twitter:label2" content="Location" />
+      <meta name="twitter:data2" content="Firozabad, India" />
 
       {/* ── JSON-LD: Person (Knowledge Panel anchor) ───────────────────────── */}
 

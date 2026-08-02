@@ -48,6 +48,14 @@ export default function CustomCursor() {
 
     const handleMouseOver = (e) => {
       const target = e.target;
+      if (!target || typeof target.closest !== 'function') return;
+
+      // Disable cursor growth inside chess modal or elements marked with data-no-cursor
+      if (target.closest('#chess-modal, [data-no-cursor="true"]')) {
+        setIsHovering(false);
+        return;
+      }
+
       // Define elements that should trigger the cursor growth
       const isHoverable = 
         target.tagName.match(/^(P|H[1-6]|A|BUTTON|LABEL|LI|SPAN)$/i) || 

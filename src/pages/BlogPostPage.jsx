@@ -36,9 +36,9 @@ export default function BlogPostPage() {
   return (
     <div className="mt-28 mb-20 min-h-[60vh]">
       <SEOHead
-        title={`${blog.title} | Avdesh Jadon`}
+        title={`${blog.title} | Jatin Jain`}
         description={blog.summary}
-        keywords={`${blog.title}, Avdesh Jadon blog, ${blog.category}, avdeshjadon`}
+        keywords={`${blog.title}, Jatin Jain blog, ${blog.category}, jainjatin07`}
         canonicalPath={`/blog/${blog.slug}`}
         ogType="article"
       />
@@ -81,10 +81,10 @@ export default function BlogPostPage() {
 
           {/* Author tag */}
           <div className="flex items-center gap-3 mt-8">
-            <div className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-sm font-medium">AJ</div>
+            <div className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-sm font-medium">JJ</div>
             <div>
-              <p className="text-sm font-medium text-black">Avdesh Jadon</p>
-              <p className="text-[11px] text-black/40 font-light">Software Tester & Full Stack Developer</p>
+              <p className="text-sm font-medium text-black">Jatin Jain</p>
+              <p className="text-[11px] text-black/40 font-light">AI Engineer | LLM & RAG Systems</p>
             </div>
           </div>
         </div>
@@ -136,13 +136,13 @@ export default function BlogPostPage() {
       {/* Author card at bottom */}
       <motion.div {...fadeUp(0.2)} className="px-5 lg:px-28 mt-8 mb-12">
         <div className="max-w-3xl rounded-2xl border border-black/8 p-6 lg:p-8 flex flex-col sm:flex-row items-start gap-5">
-          <div className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center text-lg font-medium flex-shrink-0">AJ</div>
+          <div className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center text-lg font-medium flex-shrink-0">JJ</div>
           <div>
-            <p className="text-base font-medium text-black mb-1">Written by Avdesh Jadon</p>
-            <p className="text-sm text-black/45 font-light leading-relaxed mb-3">Software Tester & Full Stack Developer at NIT Jalandhar. I write about testing, React, and building better software.</p>
+            <p className="text-base font-medium text-black mb-1">Written by Jatin Jain</p>
+            <p className="text-sm text-black/45 font-light leading-relaxed mb-3">AI Engineer specializing in LLM applications, RAG systems, and conversational AI.</p>
             <div className="flex gap-3">
-              <a href="https://github.com/avdeshjadon" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 border border-black/15 rounded-md hover:bg-black hover:text-white transition-all duration-300">GitHub</a>
-              <a href="https://linkedin.com/in/avdeshjadon" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 border border-black/15 rounded-md hover:bg-black hover:text-white transition-all duration-300">LinkedIn</a>
+              <a href="https://github.com/jainjatin07" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 border border-black/15 rounded-md hover:bg-black hover:text-white transition-all duration-300">GitHub</a>
+              <a href="https://www.linkedin.com/in/jainjatin07/" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 border border-black/15 rounded-md hover:bg-black hover:text-white transition-all duration-300">LinkedIn</a>
             </div>
           </div>
         </div>

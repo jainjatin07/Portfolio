@@ -6,50 +6,39 @@ import { BsGithub } from "react-icons/bs"
 const projects = [
   { 
     id: 1, 
-    title: "Practice Typing", 
-    category: "React Web App", 
-    description: "A sleek, MonkeyType-inspired typing practice app with progressive modes, real-time feedback, and a zen experience.", 
-    features: ["6 Typing Modes", "Live Stats (WPM)", "Smart Cursor", "Zen Mode"], 
-    tech: ["React 19", "Vite JS", "CSS-in-JS"], 
-    liveUrl: "https://practice-typing-seven.vercel.app/",
-    codeUrl: "https://github.com/avdeshjadon/practiceTyping" 
+    title: "Aether — Multi-PDF RAG Pipeline", 
+    category: "RAG & LLM Application", 
+    description: "Deployed a publicly accessible RAG application to production (Hugging Face Spaces & Netlify). Designed a LangChain document parsing, chunking, embedding, and semantic retrieval pipeline backed by ChromaDB for multi-PDF Q&A.", 
+    features: ["Multi-PDF Chunking & Parsing", "ChromaDB Semantic Retrieval", "Context-Aware LLM Generation", "Optimized Query Latency"], 
+    tech: ["Python", "LangChain", "ChromaDB", "Hugging Face", "Flask", "Netlify"], 
+    codeUrl: "https://github.com/jainjatin07" 
   },
   { 
     id: 2, 
-    title: "Secret Sauce", 
-    category: "AI Assistant", 
-    description: "AI-powered interview assistant that overlays on any platform to help students ace their online interviews on Google Meet and other platforms.", 
-    features: ["Real-time AI assistance", "Cross-platform overlay", "Interview guidance", "Mac/Windows/Linux support"], 
-    tech: ["Electron", "AI/ML", "React", "Node.js"], 
-    codeUrl: "https://github.com/avdeshjadon/Secret-Sauce" 
+    title: "Junoon — Mood-Driven AI Chatbot", 
+    category: "Conversational AI", 
+    description: "LLM-powered chatbot generating responses based on user-selected conversational moods and personalities, integrating LangChain with Mistral AI APIs.", 
+    features: ["Mood & Personality Selection", "Prompt Engineering", "Multi-turn Conversations", "Modular Architecture"], 
+    tech: ["Python", "LangChain", "Mistral AI", "HTML", "CSS", "JavaScript"], 
+    codeUrl: "https://github.com/jainjatin07" 
   },
   { 
     id: 3, 
-    title: "WebIn", 
-    category: "Browser Extension", 
-    description: "Retro-styled draggable floating overlay for quick access to your favorite web tools.", 
-    features: ["Draggable UI", "Overlay Dashboard", "Cross-site access", "Retro styling"], 
-    tech: ["JavaScript", "HTML/CSS", "Extension API"], 
-    codeUrl: "https://github.com/avdeshjadon/WebIn" 
+    title: "NemiVerse — AI Virtual Assistant", 
+    category: "Voice Assistant & Automation", 
+    description: "Voice-controlled virtual assistant executing natural-language commands for web navigation, system control, and productivity automation.", 
+    features: ["Speech Recognition", "Command Processing", "Web Navigation", "Productivity Workflows"], 
+    tech: ["Python", "NLP", "Speech Recognition", "PyTorch"], 
+    codeUrl: "https://github.com/jainjatin07" 
   },
   { 
     id: 4, 
-    title: "Cookies Extractor", 
-    category: "Browser Extension", 
-    description: "Extract, view, copy, and insert cookies from any website with a modern interface.", 
-    features: ["Cookie extraction", "Insert cookies", "Modern UI", "Copy to clipboard"], 
-    tech: ["JavaScript", "HTML", "CSS"], 
-    codeUrl: "https://github.com/avdeshjadon/Cookies" 
-  },
-  { 
-    id: 5, 
-    title: "Panda Login", 
-    category: "Web UI", 
-    description: "Cute, responsive login & signup page with animated panda UI.", 
-    features: ["Animated Panda", "Login/Signup", "Responsive", "Pure Frontend"], 
-    tech: ["HTML", "CSS", "JS"], 
-    liveUrl: "https://avdeshjadon.github.io/PandaLogin-SignUpPage/", 
-    codeUrl: "https://github.com/avdeshjadon/PandaLogin-SignUpPage" 
+    title: "Junovision — Intelligent Attendance System", 
+    category: "Computer Vision (Lead Developer)", 
+    description: "Facial-recognition attendance system that automated student identification, attendance logging, and report generation from classroom images.", 
+    features: ["Face Detection & Feature Extraction", "Student Identification", "Automated Attendance Logs", "Report Generation"], 
+    tech: ["Python", "OpenCV", "Dlib", "Flask", "MySQL"], 
+    codeUrl: "https://github.com/jainjatin07" 
   }
 ]
 
@@ -176,7 +165,7 @@ export default function Projects() {
             <div className="flex gap-5 lg:gap-6 pb-4 pr-5">
               {projects.map(p => <Card key={p.id} project={p} onSelect={setSelected} />)}
               <motion.a
-                href="https://github.com/avdeshjadon"
+                href="https://github.com/jainjatin07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 w-[150px] flex flex-col items-center justify-center gap-3 text-black/30 hover:text-black group transition-colors duration-300"

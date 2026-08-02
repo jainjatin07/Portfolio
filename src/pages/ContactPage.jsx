@@ -5,9 +5,9 @@ export default function ContactPage() {
   return (
     <div className="mt-24">
       <SEOHead
-        title="Contact Avdesh Jadon | Hire a Software Tester & Full Stack Developer"
-        description="Get in touch with Avdesh Jadon for software testing, full stack development, freelance projects, and open source collaboration. Available for full-time, internship, remote, and freelance opportunities. Email: theavdeshjadon@gmail.com"
-        keywords="Contact Avdesh Jadon, Hire Avdesh Jadon, Avdesh Jadon email, Avdesh Jadon phone, Hire Software Tester, Hire Full Stack Developer, Freelance Developer India, avdeshjadon contact"
+        title="Contact Jatin Jain | Hire an AI Engineer & LLM / RAG Specialist"
+        description="Get in touch with Jatin Jain for AI Engineering, LLM applications, RAG systems, NLP chatbots, and Python projects. Email: jainjatin386@gmail.com, Phone: +91 7466804158."
+        keywords="Contact Jatin Jain, Hire Jatin Jain, Jatin Jain email, Jatin Jain phone, Hire AI Engineer, Hire RAG Developer, LLM Applications Specialist, jainjatin07"
         canonicalPath="/contact"
       />
       <Contact />

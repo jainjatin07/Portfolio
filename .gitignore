@@ -32,3 +32,13 @@ coverage.*.json
 *.log
 # Qoder
 *.qoder 
+
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env

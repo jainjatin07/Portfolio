@@ -6,13 +6,12 @@ export default function AboutPage() {
   return (
     <div className="mt-24">
       <SEOHead
-        title="About Avdesh Jadon | Software Tester & Full Stack Developer | NIT Jalandhar"
-        description="Learn about Avdesh Jadon — a dedicated Software Tester and Full-Stack Developer at NIT Jalandhar. Specializing in test automation, manual testing, MERN stack development, React.js, Node.js. Passionate about quality assurance, building robust web applications, and open source."
-        keywords="About Avdesh Jadon, Avdesh Jadon biography, Avdesh Jadon NIT Jalandhar, Avdesh Jadon background, Software Tester, Full Stack Developer, QA Engineer, B.Tech CSE, Test Automation, MERN Stack, Open Source Contributor, avdeshjadon"
+        title="About Jatin Jain | AI Engineer | LLM Applications & RAG Systems"
+        description="Learn about Jatin Jain — AI Engineer specializing in LLM applications, Retrieval-Augmented Generation (RAG) systems, and conversational AI. Experienced in Python, LangChain, PyTorch, TensorFlow, ChromaDB."
+        keywords="About Jatin Jain, Jatin Jain biography, Jatin Jain AI Engineer, Jatin Jain background, LLM Applications, RAG Systems, Python AI Intern, B.Tech CSE"
         canonicalPath="/about"
       />
       <About />
-      <ProfileGallery />
     </div>
   )
 }

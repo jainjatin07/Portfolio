@@ -77,3 +77,24 @@ img {
   background: rgba(0, 0, 0, 0.08);
   color: #1a1a1a;
 }
+
+/* Gemini Center Glow & Shimmer Animations */
+@keyframes geminiShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-gemini-shimmer {
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc, #38bdf8);
+  background-size: 300% 100%;
+  animation: geminiShimmer 2.5s infinite linear;
+}
+
+@keyframes floatGlow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+  50% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.5; }
+}
+
+.animate-center-glow {
+  animation: floatGlow 6s ease-in-out infinite;
+}

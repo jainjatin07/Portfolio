@@ -5,6 +5,9 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CustomCursor from './utils/CursorAnimation'
 import Loader from './components/Loader'
+import ChessModal from './components/ChessModal'
+import AIAssistantModal from './components/AIAssistantModal'
+import AIAssistantButton from './components/AIAssistantButton'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import SkillsPage from './pages/SkillsPage'
@@ -26,12 +29,28 @@ const pageTransition = {
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
+  const [isChessOpen, setIsChessOpen] = useState(false)
+  const [isAIAssistantOpen, setIsAIAssistantOpen] = useState(false)
   const location = useLocation()
 
   // Scroll to top on every route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [location.pathname])
+
+  // Global event listener to open Chess Modal from any button
+  useEffect(() => {
+    const handleOpenChess = () => setIsChessOpen(true)
+    window.addEventListener('openChess', handleOpenChess)
+    return () => window.removeEventListener('openChess', handleOpenChess)
+  }, [])
+
+  // Global event listener to open AI Assistant Modal
+  useEffect(() => {
+    const handleOpenAIAssistant = () => setIsAIAssistantOpen(true)
+    window.addEventListener('openAIAssistant', handleOpenAIAssistant)
+    return () => window.removeEventListener('openAIAssistant', handleOpenAIAssistant)
+  }, [])
 
   return (
     <>
@@ -60,6 +79,9 @@ export default function App() {
           </motion.div>
         </AnimatePresence>
         <Footer />
+        <ChessModal isOpen={isChessOpen} onClose={() => setIsChessOpen(false)} />
+        <AIAssistantModal isOpen={isAIAssistantOpen} onClose={() => setIsAIAssistantOpen(false)} />
+        <AIAssistantButton />
       </div>
     </>
   )

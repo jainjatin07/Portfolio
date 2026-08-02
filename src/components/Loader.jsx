@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Loader({ onLoadComplete }) {
   const [isComplete, setIsComplete] = useState(false)
-  const name = "AVDESH JADON".split("")
+  const name = "JATIN JAIN".split("")
 
   useEffect(() => {
     // Simplified timer instead of progress tracking

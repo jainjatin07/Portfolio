@@ -5,11 +5,10 @@ import { IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram } from "react-icons/io5"
 import { BiLogoGmail } from "react-icons/bi"
 
 const socials = [
-  { Icon: BiLogoGmail, href: "mailto:theavdeshjadon@gmail.com", label: "Email" },
-  { Icon: IoLogoLinkedin, href: "https://linkedin.com/in/avdeshjadon", label: "LinkedIn" },
-  { Icon: IoLogoTwitter, href: "https://x.com/AvdeshJado26477", label: "Twitter" },
-  { Icon: IoLogoInstagram, href: "https://instagram.com/__avdeshhere", label: "Instagram" },
-  { Icon: BsGithub, href: "https://github.com/avdeshjadon", label: "GitHub" },
+  { Icon: BiLogoGmail, href: "mailto:jainjatin386@gmail.com", label: "Email" },
+  { Icon: IoLogoLinkedin, href: "https://www.linkedin.com/in/jainjatin07/", label: "LinkedIn" },
+  { Icon: IoLogoInstagram, href: "https://www.instagram.com/jain_jatin_07", label: "Instagram" },
+  { Icon: BsGithub, href: "https://github.com/jainjatin07", label: "GitHub" },
 ]
 
 const navLinks = [
@@ -26,9 +25,9 @@ export default function Footer() {
       <div className="py-10 lg:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
         <div>
           <Link to="/" aria-label="Go to homepage">
-            <h3 className="text-2xl font-medium text-black">Avdesh <span className="text-[#71717A]">Jadon</span></h3>
+            <h3 className="text-2xl font-medium text-black">Jatin <span className="text-[#71717A]">Jain</span></h3>
           </Link>
-          <p className="mt-2 text-[#71717A] text-sm font-light">Software Developer</p>
+          <p className="mt-2 text-[#71717A] text-sm font-light">AI Engineer | LLM & RAG Specialist</p>
           <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer navigation">
             {navLinks.map(({ label, path }) => (
               <Link key={path} to={path} className="text-sm text-black/50 hover:text-black transition-colors duration-300 font-light">
@@ -54,7 +53,7 @@ export default function Footer() {
               </motion.a>
             ))}
           </div>
-          <p className="text-xs font-light text-[#71717A]">© {new Date().getFullYear()} Avdesh Jadon</p>
+          <p className="text-xs font-light text-[#71717A]">© {new Date().getFullYear()} Jatin Jain</p>
         </div>
       </div>
     </footer>

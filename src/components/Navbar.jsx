@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
-import { TbDownload } from "react-icons/tb"
+import { TbDownload, TbRobot } from "react-icons/tb"
 import { HiOutlineMenu, HiX } from "react-icons/hi"
 
 const navLinks = [
@@ -35,17 +35,19 @@ export default function Navbar() {
 
   const ResumeBtn = ({ className = "" }) => (
     <motion.a
-      href="/resume/resume.pdf"
-      download="Avdesh_Jadon_Resume.pdf"
+      href="/resume/Jatin_Jain_Resume.pdf"
+      download="Jatin_Jain_Resume.pdf"
       className={`relative inline-block px-4 py-2 font-medium group ${className}`}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
     >
       <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0" />
       <span className="absolute inset-0 w-full h-full bg-white border-2 border-black transition-colors duration-300 group-hover:bg-black" />
-      <span className="relative text-black group-hover:text-white flex items-center gap-x-3 transition-colors duration-300">Resume <TbDownload size={16} /></span>
+      <span className="relative text-black group-hover:text-white flex items-center gap-x-2 transition-colors duration-300">Resume <TbDownload size={16} /></span>
     </motion.a>
   )
+
+
 
   return (
     <motion.nav
@@ -65,7 +67,7 @@ export default function Navbar() {
             className="text-2xl font-bold cursor-pointer tracking-wider"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
-            Avdesh<span className="text-[#71717A]">Jadon</span>
+            Jatin<span className="text-[#71717A]">Jain</span>
           </Link>
         </motion.div>
 
@@ -99,7 +101,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <ResumeBtn className="hidden lg:inline-block" />
+        <div className="hidden lg:flex items-center gap-x-3">
+          <ResumeBtn />
+        </div>
 
         <motion.button
           className="lg:hidden text-2xl p-1"
@@ -141,7 +145,7 @@ export default function Navbar() {
                   </Link>
                 </motion.li>
               ))}
-              <li className="mt-2">
+              <li className="mt-2 flex flex-col gap-3 items-center w-full">
                 <ResumeBtn />
               </li>
             </ul>
