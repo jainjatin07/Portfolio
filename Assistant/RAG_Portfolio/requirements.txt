@@ -19,3 +19,6 @@ nltk
 pymupdf
 python-docx
 tqdm
+faster-whisper
+sounddevice
+scipy
