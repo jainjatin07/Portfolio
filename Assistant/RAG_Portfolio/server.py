@@ -9,11 +9,12 @@ if current_dir not in sys.path:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from agent import app
+from agent import app as graph_app
 
 api = FastAPI(title="Jatin Jain Portfolio RAG Assistant API")
+app = api  # Alias for uvicorn server:app
 
-# Enable CORS for frontend connection (port 5173 / localhost)
+# Enable CORS for frontend connection
 api.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -42,7 +43,7 @@ async def chat(req: ChatRequest):
         }
     }
     
-    result = app.invoke(
+    result = graph_app.invoke(
         {"messages": [("user", user_input)]},
         config=config
     )
