@@ -9,16 +9,9 @@ langchain-mistralai
 langchain-google-genai
 langchain-groq
 faiss-cpu
-sentence-transformers
-transformers
-torch
 rank-bm25
 scikit-learn
 numpy
-nltk
 pymupdf
 python-docx
 tqdm
-faster-whisper
-sounddevice
-scipy
